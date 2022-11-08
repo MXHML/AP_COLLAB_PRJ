@@ -1,7 +1,10 @@
 //Variables
 let themeID = 0;
-let HTMLDropdownID = 0;
+let HTMLDropdownID = 1;
+let JSDropdownID = 1;
 var themeSwitch_btn = document.getElementById("theme-switch");
+var HTMLDropdown = document.getElementById("html-dropdown");
+var JSDropdown = document.getElementById("javascript-dropdown");
 
 //Event Listeners
 
@@ -31,33 +34,7 @@ function openNav() {
     document.body.style.backgroundColor = "white";
   }
 
-  var dropdown = document.getElementById("html-dropdown");
-  var i;
   
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
-
-  for (i = 0; i < document.getElementById("javascript-dropdown").length; i++) {
-    document.getElementById("javascript-dropdown")[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
-
 function HTMLDropdownArrow(){
     if(HTMLDropdownID==0){
         document.getElementById("html-dropdown").innerHTML='Html<div style="font-size:15px; display:inline"> &#x25B2;'
@@ -68,3 +45,41 @@ function HTMLDropdownArrow(){
         HTMLDropdownID=0;
     }
 }
+
+function JSDropdownArrow(){
+    if(JSDropdownID==0){
+        document.getElementById("javascript-dropdown").innerHTML='JavaScript<div style="font-size:15px; display:inline"> &#x25B2;'
+        JSDropdownID++
+    }
+    else if(JSDropdownID==1){
+        document.getElementById("javascript-dropdown").innerHTML='JavaScript<div style="font-size:15px; display:inline"> &#x25BC;'
+        JSDropdownID=0;
+    }
+}
+
+//0 Is closed, 1 is open
+let HTMLDropdownListID = 0;
+HTMLDropdown.addEventListener("click",()=>{
+    console.log("FIRE");
+    if(HTMLDropdownListID==0){
+        document.getElementById("html-links-container").style.display='none';
+        HTMLDropdownListID++
+    }
+    else if(HTMLDropdownListID==1){
+        document.getElementById("html-links-container").style.display='block';
+        HTMLDropdownListID=0;
+    }
+})
+
+let JSDropdownListID = 0;
+JSDropdown.addEventListener("click",()=>{
+    console.log("FIRE");
+    if(JSDropdownListID==0){
+        document.getElementById("javascript-links-container").style.display='none';
+        JSDropdownListID++
+    }
+    else if(JSDropdownListID==1){
+        document.getElementById("javascript-links-container").style.display='block';
+        JSDropdownListID=0;
+    }
+})
