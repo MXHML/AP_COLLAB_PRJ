@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
+    <button onclick="openNav()">Nav Placeholder</button>
     <div id="sideNav" class="sideNav">
-        <a href="pages/html/welcome.html">HTML Home</a>
-        <a href="pages/html/basics.html">HTML Basics</a>
-    </div>
+        <p onclick="closeNav()" style="color:white;">&#10006;</p>
+        <div id="html-dropdown" class="html-dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
 
-    <span 
+        <div id="html-links-container">
+            <a href="pages/html/welcome.html">HTML Home</a>
+            <a href="pages/html/basics.html">HTML Basics</a>
+        </div>
+    </div>
 
 <div id="main-container">
     <button id="theme-switch" type="button" onclick="changeTheme()">Switch Themes</button>
