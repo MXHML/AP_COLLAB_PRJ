@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-    <button onclick="openNav()">Nav Placeholder</button>
+    <p style="font-size:35px; user-select:none; margin:0px; margin-bottom:2%" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
-        <p onclick="closeNav()" style="color:white; user-select: none;">&#10006;</p>
-        <div id="html-dropdown" class="html-dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+
+        <p onclick="closeNav()" style="color:white; user-select: none; font-size:25px;">&#10006;</p>
+
+        <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="html-dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
 
         <div id="html-links-container">
             <a href="pages/html/welcome.html">HTML Home</a>
@@ -20,7 +22,9 @@
     </div>
 
 <div id="main-container">
+
     <button id="theme-switch" type="button" onclick="changeTheme()">Switch Themes</button>
+    
 </div>
 
 </body>

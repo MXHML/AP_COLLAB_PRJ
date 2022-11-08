@@ -1,5 +1,6 @@
 //Variables
 let themeID = 0;
+let HTMLDropdownID = 0;
 var themeSwitch_btn = document.getElementById("theme-switch");
 
 //Event Listeners
@@ -44,3 +45,14 @@ function openNav() {
       }
     });
   }
+
+function HTMLDropdownArrow(){
+    if(HTMLDropdownID==0){
+        document.getElementById("html-dropdown").innerHTML='Html<div style="font-size:15px; display:inline"> &#x25B2;'
+        HTMLDropdownID++
+    }
+    else if(HTMLDropdownID==1){
+        document.getElementById("html-dropdown").innerHTML='Html<div style="font-size:15px; display:inline"> &#x25BC;'
+        HTMLDropdownID=0;
+    }
+}
