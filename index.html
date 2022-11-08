@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-    <p style="font-size:35px; user-select:none; margin:0px; margin-bottom:2%" onclick="openNav()">&#9776;</p>
+    <p id="openNav_btn" style="font-size:35px; user-select:none; margin:0px; margin-bottom:2%" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
 
-        <p onclick="closeNav()" style="color:white; user-select: none; font-size:25px;">&#10006;</p>
+        <p id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px;">&#10006;</p>
 
         <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
 
@@ -24,7 +24,7 @@
 
         <div id="javascript-links-container" style="display:none;">
             <a href="pages/javascript/basics.html">JavaScript Basics</a>
-            <a href="pages/javascript/welcome.html">
+            <a href="pages/javascript/welcome.html">JavaScript Welcome</a>
         </div>
     </div>
 

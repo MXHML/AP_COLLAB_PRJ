@@ -11,11 +11,33 @@ var JSDropdown = document.getElementById("javascript-dropdown");
 //Functions
 function changeTheme(){
     if(themeID==0){
+        let QuerySelectorA = document.querySelectorAll('a');
+        document.getElementById('closeNav_btn').style.color='black'
         document.getElementById("html").style.backgroundColor='black';
+        document.getElementById("openNav_btn").style.color='white';
+        document.getElementById("sideNav").style.backgroundColor='white';
+        document.getElementById("html-dropdown").style.color='black';
+        document.getElementById("javascript-dropdown").style.color='black';
+        QuerySelectorA.forEach(()=>{
+            for(let x=0;x<QuerySelectorA.length;x++){
+                QuerySelectorA[x].style.color='black';
+            }
+        })
         themeID++
     }
     else if(themeID==1){
+        let QuerySelectorA = document.querySelectorAll('a');
+        document.getElementById('closeNav_btn').style.color='white'
         document.getElementById("html").style.backgroundColor='white';
+        document.getElementById("openNav_btn").style.color='black';
+        document.getElementById("sideNav").style.backgroundColor='black';
+        document.getElementById("html-dropdown").style.color='white';
+        document.getElementById("javascript-dropdown").style.color='white';
+        QuerySelectorA.forEach(()=>{
+            for(let x=0;x<QuerySelectorA.length;x++){
+                QuerySelectorA[x].style.color='white';
+            }
+        })
         themeID=0;
     }
 }
@@ -24,14 +46,12 @@ function changeTheme(){
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
     document.getElementById("main-container").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
   
   /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
   function closeNav() {
     document.getElementById("sideNav").style.width = "0";
     document.getElementById("main-container").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
   }
 
   
@@ -75,10 +95,12 @@ let JSDropdownListID = 0;
 JSDropdown.addEventListener("click",()=>{
     console.log("FIRE");
     if(JSDropdownListID==0){
+        console.log('CLOSE');
         document.getElementById("javascript-links-container").style.display='none';
         JSDropdownListID++
     }
     else if(JSDropdownListID==1){
+        console.log('OPEN')
         document.getElementById("javascript-links-container").style.display='block';
         JSDropdownListID=0;
     }
