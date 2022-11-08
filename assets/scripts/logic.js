@@ -31,11 +31,23 @@ function openNav() {
     document.body.style.backgroundColor = "white";
   }
 
-  var dropdown = document.getElementsByClassName("html-dropdown");
+  var dropdown = document.getElementById("html-dropdown");
   var i;
   
   for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+
+  for (i = 0; i < document.getElementById("javascript-dropdown").length; i++) {
+    document.getElementById("javascript-dropdown")[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
