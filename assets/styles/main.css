@@ -72,7 +72,15 @@
   }
 
 #theme-switch{
+  position: absolute;
   background-color: transparent;
+  font-size:15px;
+  user-select:none; 
+  margin:0px;
+  margin-bottom:2%;
+  z-index:2;
+  top:10px;
+  left:12px;
 }
 
 #openNav_btn{
@@ -81,18 +89,14 @@
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
+  z-index:1;
 }
 
 .header{
+  margin-top:3%;
   z-index: -1;
   position:relative;
   top:-30px;
   text-align: center;
-}
-
-.header{
-  z-index: 1;
-  position:relative;
-  top:-30px;
-  text-align: center;
+  pointer-events: none;
 }
