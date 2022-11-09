@@ -74,3 +74,10 @@
 #theme-switch{
   color: red;
 }
+
+.header{
+  z-index: 1;
+  position:relative;
+  top:-30px;
+  text-align: center;
+}
