@@ -78,5 +78,6 @@
 #openNav_btn{
   width: fit-content;
   text-align: justify;
-  margin: none;
+  margin-top: 0px;
+  padding-top: 0px;
 }
