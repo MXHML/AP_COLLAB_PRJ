@@ -18,6 +18,7 @@ function changeTheme(){
         document.getElementById("sideNav").style.backgroundColor='white';
         document.getElementById("html-dropdown").style.color='black';
         document.getElementById("javascript-dropdown").style.color='black';
+        document.getElementById('theme-switch').style.color='black';
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
                 QuerySelectorA[x].style.color='black';
@@ -33,6 +34,8 @@ function changeTheme(){
         document.getElementById("sideNav").style.backgroundColor='black';
         document.getElementById("html-dropdown").style.color='white';
         document.getElementById("javascript-dropdown").style.color='white';
+        document.getElementById('theme-switch').style.color='white';
+
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
                 QuerySelectorA[x].style.color='white';
