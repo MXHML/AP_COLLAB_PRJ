@@ -72,7 +72,22 @@
   }
 
 #theme-switch{
-  color: red;
+  background-color: transparent;
+}
+
+#openNav_btn{
+  width: fit-content;
+  text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+.header{
+  z-index: 1;
+  position:relative;
+  top:-30px;
+  text-align: center;
 }
 
 .header{
