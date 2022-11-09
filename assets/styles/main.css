@@ -74,6 +74,8 @@
 #theme-switch{
   position: absolute;
   background-color: transparent;
+  margin-top: 0px;
+  margin-right: 0px;
   font-size:15px;
   user-select:none; 
   margin:0px;

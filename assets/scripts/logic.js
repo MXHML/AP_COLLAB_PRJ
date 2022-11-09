@@ -36,7 +36,7 @@ function changeTheme(){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
 
-        document.getElementById('closeNav_btn').style.color='white'
+        document.getElementById('closeNav_btn').style.color='white';
         document.getElementById("html").style.backgroundColor='white';
         document.getElementById("openNav_btn").style.color='black';
         document.getElementById("sideNav").style.backgroundColor='black';
