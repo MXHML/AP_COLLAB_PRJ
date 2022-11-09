@@ -12,6 +12,7 @@ var JSDropdown = document.getElementById("javascript-dropdown");
 function changeTheme(){
     if(themeID==0){
         let QuerySelectorA = document.querySelectorAll('a');
+        let QuerySelectorP = document.querySelectorAll('p');
         document.getElementById('closeNav_btn').style.color='black'
         document.getElementById("html").style.backgroundColor='black';
         document.getElementById("openNav_btn").style.color='white';
@@ -24,10 +25,17 @@ function changeTheme(){
                 QuerySelectorA[x].style.color='black';
             }
         })
+        QuerySelectorP.forEach(()=>{
+            for(let x=0;x<QuerySelectorP.length;x++){
+                QuerySelectorP[x].style.color='white';
+            }
+        })
         themeID++
     }
     else if(themeID==1){
         let QuerySelectorA = document.querySelectorAll('a');
+        let QuerySelectorP = document.querySelectorAll('p');
+
         document.getElementById('closeNav_btn').style.color='white'
         document.getElementById("html").style.backgroundColor='white';
         document.getElementById("openNav_btn").style.color='black';
@@ -35,6 +43,12 @@ function changeTheme(){
         document.getElementById("html-dropdown").style.color='white';
         document.getElementById("javascript-dropdown").style.color='white';
         document.getElementById('theme-switch').style.color='black';
+
+        QuerySelectorP.forEach(()=>{
+            for(let x=0;x<QuerySelectorP.length;x++){
+                QuerySelectorP[x].style.color='black';
+            }
+        })
 
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
