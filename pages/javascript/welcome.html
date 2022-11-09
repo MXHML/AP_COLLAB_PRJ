@@ -7,7 +7,8 @@
     <title>Code Helper</title>
     <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
-<body class="main">
+<body>
+<div id="main-container">
     <p id="openNav_btn" style="font-size:35px; user-select:none; margin:0px; margin-bottom:2%" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
 
@@ -28,11 +29,7 @@
         </div>
     </div>
 
-<div id="main-container">
-
     <button id="theme-switch" type="button" onclick="changeTheme()">Switch Themes</button>
-
-</div>
 <div class="header" id="header">
     <h1>Welcome to JavaScript!</h1>
     <div id="about-js">
@@ -42,10 +39,10 @@
     </div>
 </div>
 
-<div id="body-container">
-    <h3>JavaScript is one of the 3 basic languages of the web, including:</h3>
+<div id="body-container" style="text-align:center;">
+    <h3>JavaScript is one of the 3 basic languages of the web, along with HTML and CSS</h3>
 </div>
-
+</div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
 </html>
