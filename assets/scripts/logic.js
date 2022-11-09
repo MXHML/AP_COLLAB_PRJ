@@ -13,7 +13,7 @@ function changeTheme(){
     if(themeID==0){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
-        document.getElementById('closeNav_btn').style.color='white'
+        document.getElementById('closeNav_btn').style.color='black'
         document.getElementById("html").style.backgroundColor='black';
         document.getElementById("openNav_btn").style.color='white';
         document.getElementById("sideNav").style.backgroundColor='white';
@@ -36,7 +36,7 @@ function changeTheme(){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
 
-        document.getElementById('closeNav_btn').style.color='white';
+        document.getElementById('closeNav_btn').style.color='black';
         document.getElementById("html").style.backgroundColor='white';
         document.getElementById("openNav_btn").style.color='black';
         document.getElementById("sideNav").style.backgroundColor='black';
