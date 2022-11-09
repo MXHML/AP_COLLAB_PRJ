@@ -1,7 +1,7 @@
 //Variables
-let themeID = 0;
-let HTMLDropdownID = 1;
-let JSDropdownID = 1;
+let themeID = 0; //Id for the theme
+let HTMLDropdownID = 0; //Arrows for the dropdown name
+let JSDropdownID = 0; //Arrows for the dropdown names
 var themeSwitch_btn = document.getElementById("theme-switch");
 var HTMLDropdown = document.getElementById("html-dropdown");
 var JSDropdown = document.getElementById("javascript-dropdown");
@@ -78,7 +78,7 @@ function JSDropdownArrow(){
 }
 
 //0 Is closed, 1 is open
-let HTMLDropdownListID = 0;
+let HTMLDropdownListID = 1;
 HTMLDropdown.addEventListener("click",()=>{
     console.log("FIRE");
     if(HTMLDropdownListID==0){
@@ -91,7 +91,7 @@ HTMLDropdown.addEventListener("click",()=>{
     }
 })
 
-let JSDropdownListID = 0;
+let JSDropdownListID = 1;
 JSDropdown.addEventListener("click",()=>{
     console.log("FIRE");
     if(JSDropdownListID==0){

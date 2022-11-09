@@ -62,6 +62,7 @@
     user-select: none;
     color:white;
     font-size: 25px;
+    transition: 0.3s;
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sideNav (less padding and a smaller font size) */
