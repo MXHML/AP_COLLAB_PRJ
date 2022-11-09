@@ -74,3 +74,8 @@
 #theme-switch{
   background-color: transparent;
 }
+
+#openNav_btn{
+  width: fit-content;
+  text-align: justify;
+}
