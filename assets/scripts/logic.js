@@ -2,9 +2,15 @@
 let themeID = sessionStorage.getItem('themeID');
 let HTMLDropdownID = 0; //Arrows for the dropdown name
 let JSDropdownID = 0; //Arrows for the dropdown names
+let debugDropdownID = 0;
 var themeSwitch_btn = document.getElementById("theme-switch");
 var HTMLDropdown = document.getElementById("html-dropdown");
 var JSDropdown = document.getElementById("javascript-dropdown");
+var debugDropdown = document.getElementById("debug-dropdown");
+var theme_dd = document.getElementById("theme_dd");
+let themeList = ['light','dark','christmas','red'];
+
+
 
 window.addEventListener('load',()=>{
     if(sessionStorage.themeID==undefined){
@@ -33,13 +39,14 @@ function changeTheme(){
         let QuerySelectorP = document.querySelectorAll('p');
         let QuerySelectorH3 = document.querySelectorAll('h3');
         let QuerySelectorH1 = document.querySelectorAll('h1');
+        let QuerySelectorLi = document.querySelectorAll('li');
         document.getElementById('closeNav_btn').style.color='black'
         document.getElementById("html").style.backgroundColor='grey';
         document.getElementById("openNav_btn").style.color='white';
         document.getElementById("sideNav").style.backgroundColor='white';
         document.getElementById("html-dropdown").style.color='black';
         document.getElementById("javascript-dropdown").style.color='black';
-        document.getElementById('theme-switch').style.color='white';
+        document.getElementById('debug-dropdown').style.color='black';
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
                 QuerySelectorA[x].style.color='black';
@@ -60,19 +67,25 @@ function changeTheme(){
                 QuerySelectorH1[x].style.color='white';
             }
         })
+        QuerySelectorLi.forEach(()=>{
+            for(let x=0;x<QuerySelectorLi.length;x++){
+                QuerySelectorLi[x].style.color='white';
+            }
+        })
     }
     else if(themeID==1){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
         let QuerySelectorH3 = document.querySelectorAll('h3');
         let QuerySelectorH1 = document.querySelectorAll('h1');
+        let QuerySelectorLi = document.querySelectorAll('li');
         document.getElementById('closeNav_btn').style.color='black';
         document.getElementById("html").style.backgroundColor='white';
         document.getElementById("openNav_btn").style.color='black';
         document.getElementById("sideNav").style.backgroundColor='black';
         document.getElementById("html-dropdown").style.color='white';
         document.getElementById("javascript-dropdown").style.color='white';
-        document.getElementById('theme-switch').style.color='black';
+        document.getElementById('debug-dropdown').style.color='white';
 
         QuerySelectorP.forEach(()=>{
             for(let x=0;x<QuerySelectorP.length;x++){
@@ -97,6 +110,13 @@ function changeTheme(){
                 QuerySelectorH1[x].style.color='black';
             }
         })
+
+        QuerySelectorLi.forEach(()=>{
+            for(let x=0;x<QuerySelectorLi.length;x++){
+                QuerySelectorLi[x].style.color='black';
+            }
+        })
+
     }
 }
 
@@ -135,6 +155,17 @@ function JSDropdownArrow(){
     }
 }
 
+function debugDropdownArrow(){
+    if(debugDropdownID==0){
+        document.getElementById("debug-dropdown").innerHTML='Debug<div style="font-size:15px; display:inline"> &#x25B2;'
+        debugDropdownID++
+    }
+    else if(debugDropdownID==1){
+        document.getElementById("debug-dropdown").innerHTML='Debug<div style="font-size:15px; display:inline"> &#x25BC;'
+        debugDropdownID=0;
+    }
+}
+
 //0 Is closed, 1 is open
 let HTMLDropdownListID = 1;
 HTMLDropdown.addEventListener("click",()=>{
@@ -162,4 +193,30 @@ JSDropdown.addEventListener("click",()=>{
         document.getElementById("javascript-links-container").style.display='block';
         JSDropdownListID=0;
     }
+})
+
+let debugDropdownListID = 1;
+debugDropdown.addEventListener("click",()=>{
+    console.log("FIRE");
+    if(debugDropdownListID==0){
+        console.log('CLOSE');
+        document.getElementById("debug-links-container").style.display='none';
+        debugDropdownListID++
+    }
+    else if(debugDropdownListID==1){
+        console.log('OPEN')
+        document.getElementById("debug-links-container").style.display='block';
+        debugDropdownListID=0;
+    }
+})
+
+window.addEventListener('load',()=>{
+    themeList.forEach(()=>{
+        for (let x=0;x<themeList.length;x++){
+            let temp = document.createElement('option');
+            temp.value=themeList[x];
+            temp.innerHTML=themeList[x];
+            theme_dd.appendChild(temp);
+        }
+    })
 })

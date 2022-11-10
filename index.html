@@ -29,10 +29,20 @@
             <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
             <a href="/pages/javascript/js_output.html">JS Output</a>
             <a href="/pages/javascript/variables.html">JS Variables</a>
+            <a href="/pages/javascript/functions.html">JS Functions</a>
+        </div>
+
+        <div onclick="debugDropdownArrow()" id="debug-dropdown" class="dropdown">Debug<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+
+        <div id="debug-links-container" style="display:none;">
+            <a href="/pages/debug/welcome.html">Debug Welcome</a>
+            <a href="/pages/debug/basics.html">Debug Basics</a>
         </div>
     </div>
 
-    <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
+    <select id="theme_dd">
+        <option value="Select Theme" disabled="disabled" selected="selected">Select Theme</option>
+    </select>
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>

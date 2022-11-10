@@ -10,26 +10,36 @@
 <body>
 <div id="main-container" style="z-index:-1;">
     <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
-    <div id="sideNav" class="sideNav">
-
-        <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;">&#10006;</a>
-
-        <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
-
-        <div id="html-links-container" style="display:none;">
-            <a href="/pages/html/welcome.html">HTML Home</a>
-            <a href="/pages/html/basics.html">HTML Basics</a>
-        </div>
-
-        <div onclick="JSDropdownArrow()" id="javascript-dropdown" class="dropdown">JavaScript<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
-
-        <div id="javascript-links-container" style="display:none;">
-            <a href="/pages/javascript/welcome.html">JavaScript Welcome</a>
-            <a href="/pages/javascript/basics.html">JavaScript Basics</a>
-            <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
-            <a href="/pages/javascript/js_output.html">JS Output</a>
-            <a href="/pages/javascript/variables.html">JS Variables</a>
-        </div>
+    <div id="main-container">
+        <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
+        <div id="sideNav" class="sideNav">
+    
+            <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;margin-right:10px;">&#10006;</a>
+    
+            <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="html-links-container" style="display:none;">
+                <a href="/pages/html/welcome.html">HTML Home</a>
+                <a href="/pages/html/basics.html">HTML Basics</a>
+            </div>
+    
+            <div onclick="JSDropdownArrow()" id="javascript-dropdown" class="dropdown">JavaScript<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="javascript-links-container" style="display:none;">
+                <a href="/pages/javascript/welcome.html">JavaScript Welcome</a>
+                <a href="/pages/javascript/basics.html">JavaScript Basics</a>
+                <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
+                <a href="/pages/javascript/js_output.html">JS Output</a>
+                <a href="/pages/javascript/variables.html">JS Variables</a>
+                <a href="/pages/javascript/functions.html">JS Functions</a>
+            </div>
+    
+            <div onclick="debugDropdownArrow()" id="debug-dropdown" class="dropdown">Debug<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="debug-links-container" style="display:none;">
+                <a href="/pages/debug/welcome.html">Debug Welcome</a>
+                <a href="/pages/debug/basics.html">Debug Basics</a>
+            </div>
     </div>
 
     <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
@@ -47,10 +57,71 @@
         <li>Use the <code>=</code> operator to change the value of a variable.</li>
     </ul>
 
-    <div id="javascript-example">
-        <h3>Here's an example of JavaScript:</h3>
-        <button id="js-example-btn" type="button" onclick="alert('Hello World!')">Click Me!</button>
+    <div id="var-example">
+        <h3>Example:</h3>
+        <p>var x = 5;</p>
+        <p>let y = 6;</p>
+        <p>var z = x + y;</p>
+        <p>z = document.getElementById('example');</p>
     </div>
+
+    <h3>JavaScript also has arithmatic operators</h3>
+
+    <div id="arithmatic-operators">
+        <h3>Arithmatic Operators</h3>
+        <p>Arithmatic operators are used to perform mathematical operations on numbers.</p>
+        <p>JavaScript has the following arithmatic operators:</p>
+        <ul style="list-style-type: none;">
+            <li><code>+</code> - Addition</li>
+            <li><code>-</code> - Subtraction</li>
+            <li><code>*</code> - Multiplication</li>
+            <li><code>/</code> - Division</li>
+            <li><code>%</code> - Modulus</li>
+            <li><code>++</code> - Increment</li>
+            <li><code>--</code> - Decrement</li>
+        </ul>
+        </div>
+<div id="example-container" style="display:inline-flex">
+        <div id="addition-example" style="margin-right:50px;">
+            <h3>Addition Example:</h3>
+            <p>var x = 5;</p>
+            <p>var y = 6;</p>
+            <p>var z = x + y;</p>
+            <p>z=11</p>
+        </div>
+
+        <div id="subtraction-example" style="margin-right:50px;">
+            <h3>Subtraction Example:</h3>
+            <p>var x = 5;</p>
+            <p>var y = 6;</p>
+            <p>var z = x - y;</p>
+            <p>z=-1</p>
+        </div>
+
+        <div id="multiplication-example" style="margin-right:50px;">
+            <h3>Multiplication Example:</h3>
+            <p>var x = 5;</p>
+            <p>var y = 6;</p>
+            <p>var z = x * y;</p>
+            <p>z=30</p>
+        </div>
+
+        <div id="division-example" style="margin-right:50px;">
+            <h3>Division Example:</h3>
+            <p>var x = 5;</p>
+            <p>var y = 6;</p>
+            <p>var z = x / y;</p>
+            <p>z=0.8333333333333334</p>
+        </div>
+
+        <div id="modulus-example" style="margin-right:50px;">
+            <h3>Modulus Example:</h3>
+            <p>var x = 5;</p>
+            <p>var y = 6;</p>
+            <p>var z = x % y;</p>
+            <p>z=5</p>
+        </div>
+</div>
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
