@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
 <body>
-<div id="main-container">
+<div id="main-container" style="z-index:-1;">
     <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
 
@@ -30,7 +30,7 @@
     </div>
 
     <button id="theme-switch" type="button" onclick="changeTheme()">Switch Themes</button>
-<div class="header" id="header">
+<div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
     <h1>Welcome to JavaScript!</h1>
     <div id="about-js">
         <p>JavaScript is the backbone of the web</p>
@@ -38,10 +38,13 @@
         <p>And it's easy to learn!</p>
     </div>
 </div>
-
 <div id="body-container" style="text-align:center;">
-    <h3>JavaScript is one of the 3 basic languages of the web, along with HTML and CSS</h3>
-</div>
+    <h3>JavaScript is one of the 3 basic languages of the web, along with HTML and CSS</h3><br>
+
+    <div id="javascript-example">
+        <h3>Here's an example of JavaScript:</h3>
+        <button id="js-example-btn" type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </div>
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>

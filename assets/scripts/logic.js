@@ -122,3 +122,7 @@ JSDropdown.addEventListener("click",()=>{
         JSDropdownListID=0;
     }
 })
+
+document.getElementById('js-example-btn').addEventListener('click',()=>{
+    console.log('You found me!')
+})
