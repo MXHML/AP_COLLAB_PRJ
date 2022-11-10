@@ -1,15 +1,33 @@
 //Variables
-let themeID = 0; //Id for the theme
+let themeID = sessionStorage.getItem('themeID');
 let HTMLDropdownID = 0; //Arrows for the dropdown name
 let JSDropdownID = 0; //Arrows for the dropdown names
 var themeSwitch_btn = document.getElementById("theme-switch");
 var HTMLDropdown = document.getElementById("html-dropdown");
 var JSDropdown = document.getElementById("javascript-dropdown");
 
-//Event Listeners
+window.addEventListener('load',()=>{
+    if(sessionStorage.themeID==undefined){
+        sessionStorage.setItem('themeID',1);
+    }
+    changeTheme();
+})
+
 
 //Functions
+function changeThemeVal(){
+    if(themeID==0){
+        sessionStorage.setItem('themeID',1)
+        changeTheme();
+    }
+    else if(themeID==1){
+        sessionStorage.setItem('themeID',0)
+        changeTheme();
+    }
+}
+
 function changeTheme(){
+    themeID=sessionStorage.getItem('themeID');
     if(themeID==0){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
@@ -30,7 +48,6 @@ function changeTheme(){
                 QuerySelectorP[x].style.color='white';
             }
         })
-        themeID++
     }
     else if(themeID==1){
         let QuerySelectorA = document.querySelectorAll('a');
@@ -55,7 +72,6 @@ function changeTheme(){
                 QuerySelectorA[x].style.color='white';
             }
         })
-        themeID=0;
     }
 }
 
