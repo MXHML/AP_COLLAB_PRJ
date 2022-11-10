@@ -31,8 +31,10 @@ function changeTheme(){
     if(themeID==0){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
+        let QuerySelectorH3 = document.querySelectorAll('h3');
+        let QuerySelectorH1 = document.querySelectorAll('h1');
         document.getElementById('closeNav_btn').style.color='black'
-        document.getElementById("html").style.backgroundColor='black';
+        document.getElementById("html").style.backgroundColor='grey';
         document.getElementById("openNav_btn").style.color='white';
         document.getElementById("sideNav").style.backgroundColor='white';
         document.getElementById("html-dropdown").style.color='black';
@@ -48,11 +50,22 @@ function changeTheme(){
                 QuerySelectorP[x].style.color='white';
             }
         })
+        QuerySelectorH3.forEach(()=>{
+            for(let x=0;x<QuerySelectorH3.length;x++){
+                QuerySelectorH3[x].style.color='white';
+            }
+        })
+        QuerySelectorH1.forEach(()=>{
+            for(let x=0;x<QuerySelectorH1.length;x++){
+                QuerySelectorH1[x].style.color='white';
+            }
+        })
     }
     else if(themeID==1){
         let QuerySelectorA = document.querySelectorAll('a');
         let QuerySelectorP = document.querySelectorAll('p');
-
+        let QuerySelectorH3 = document.querySelectorAll('h3');
+        let QuerySelectorH1 = document.querySelectorAll('h1');
         document.getElementById('closeNav_btn').style.color='black';
         document.getElementById("html").style.backgroundColor='white';
         document.getElementById("openNav_btn").style.color='black';
@@ -70,6 +83,18 @@ function changeTheme(){
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
                 QuerySelectorA[x].style.color='white';
+            }
+        })
+
+        QuerySelectorH3.forEach(()=>{
+            for(let x=0;x<QuerySelectorH3.length;x++){
+                QuerySelectorH3[x].style.color='black';
+            }
+        })
+
+        QuerySelectorH1.forEach(()=>{
+            for(let x=0;x<QuerySelectorH1.length;x++){
+                QuerySelectorH1[x].style.color='black';
             }
         })
     }
@@ -137,8 +162,4 @@ JSDropdown.addEventListener("click",()=>{
         document.getElementById("javascript-links-container").style.display='block';
         JSDropdownListID=0;
     }
-})
-
-document.getElementById('js-example-btn').addEventListener('click',()=>{
-    console.log('You found me!')
 })
