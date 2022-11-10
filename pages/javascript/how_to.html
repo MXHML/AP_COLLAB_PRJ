@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Helper</title>
     <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
 <body>
 <div id="main-container" style="z-index:-1;">
@@ -35,19 +34,42 @@
 
     <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
 <div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
-    <h1>Welcome to JavaScript!</h1>
+    <h1>Link JavaScript to HTML</h1>
     <div id="about-js">
-        <p>JavaScript is the backbone of the web</p>
-        <p>It's one of the most popular, and easiest languages to learn!</p>
+        <p>Well how do I use JavaScript on a webpage?</p>
+        <p>It's simple!</p>
     </div>
 </div>
 <div id="body-container" style="text-align:center;">
-    <h3>JavaScript is one of the 3 basic languages of the web, along with HTML and CSS</h3><br>
+    <h3>JavaScript can be used on a HTML page in two ways:</h3><br>
 
-    <div id="javascript-example">
-        <h3>Here's an example of JavaScript:</h3>
-        <button id="js-example-btn" type="button" onclick="alert('Hello World!')">Click Me!</button>
+    <div id="script-element-example">
+        <h3>The  &lt;script&gt;  tag</h3>
+        <p>The &lt;script&gt; tag is the easiest way to use JavaScript inside an HTML page, all you have to do is
+            put the JavaScript code inside the &lt;script&gt; tag and it will run when the page loads.</p>
+        <p>Here is an example:</p>
+        <div id="script-element-example-code">
+            <p>
+                    &lt;script&gt;<br>
+                        alert("Hello World!");<br>
+                    &lt;/script&gt;
+        </p>
+        </div>
+        <p>When this the page loads, the browser will show an alert containing 'Hello World!'</p>
     </div>
+
+    <div id="external-js-example">
+        <h3>External JavaScript</h3>
+        <p>External JavaScript is a way to use JavaScript on a HTML page without using the &lt;script&gt; tag.</p>
+        <p>Here is an example:</p>
+        <div id="external-js-example-code">
+            <p>
+                &lt;script src="script.js"&gt;&lt;/script&gt;
+            </p>
+        </div>
+        <p>When the page loads, the browser will look for a file called 'script.js' and run the code inside it.</p>
+        <p>(Typically, external JavaScript files are loaded AFTER the body tag. <strong> The order you load them matters!</strong>)</p>
+        <p>&lt;/body&gt;<br>&lt;script src="script.js"&gt;&lt;/script&gt;<br>&lt;/html&gt;</p>
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
