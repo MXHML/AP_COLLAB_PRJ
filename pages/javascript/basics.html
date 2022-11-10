@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
 <body>
-    <p id="openNav_btn" style="font-size:35px; user-select:none; margin:0px; margin-bottom:2%" onclick="openNav()">&#9776;</p>
+<div id="main-container" style="z-index:-1;">
+    <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
 
-        <p id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px;">&#10006;</p>
+        <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;">&#10006;</a>
 
         <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
 
@@ -25,16 +26,44 @@
         <div id="javascript-links-container" style="display:none;">
             <a href="/pages/javascript/welcome.html">JavaScript Welcome</a>
             <a href="/pages/javascript/basics.html">JavaScript Basics</a>
+            <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
+            <a href="/pages/javascript/js_output.html">JS Output</a>
         </div>
     </div>
 
-<div id="main-container">
-
-    <button id="theme-switch" type="button" onclick="changeTheme()">Switch Themes</button>
-
+    <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
+<div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
+    <h1>JavaScript Basics</h1>
+    <div id="about-js">
+        <p>Let's start with the basics:</p>
+        <p>What can JavaScript do?</p>
+    </div>
 </div>
+<div id="body-container" style="text-align:center;">
+    <h3>JavaScript is mainly used for changing HTML content on a page</h3><br>
 
+    <div id="javascript-example">
+        <h3>Here's an example:</h3>
+        <div id="example"><p>document.getElementById('example').innerText='Hello World!'</p></div>
+        <p>Paste the above into your developer console (right click->inspect, or preferences)</p><br>
+    </div>
 
+    <h3>JavaScript can also change images too!</h3>
+    <div id="javascript-img-example" style="margin-bottom:10vh;">
+        <button onclick="document.getElementById('bulb-example').src='/assets/images/pic_bulbon.gif'">Bulb on</button>
+        <img id="bulb-example" src="/assets/images/pic_bulboff.gif">
+        <button onclick="document.getElementById('bulb-example').src='/assets/images/pic_bulboff.gif'">Bulb off</button>
+    </div>
+
+    <h3>Finally, JavaScript can change CSS styles!</h3>
+    <div id="javascript-css-example" style="display:inline-flex">
+        <button onclick="document.getElementById('css-example').style.color='red'">Red</button>
+        <p id="css-example" style="margin:20px;">This is a paragraph</p>
+        <button onclick="document.getElementById('css-example').style.color='black'">Black</button>
+    </div>
+
+    
+</div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
 </html>

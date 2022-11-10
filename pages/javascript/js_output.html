@@ -33,19 +33,43 @@
 
     <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
 <div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
-    <h1>Welcome to JavaScript!</h1>
+    <h1>JavaScript Output</h1>
     <div id="about-js">
-        <p>JavaScript is the backbone of the web</p>
-        <p>It's one of the most popular, and easiest languages to learn!</p>
+        <p>How do I read/display data from JavaScript?</p>
     </div>
 </div>
 <div id="body-container" style="text-align:center;">
-    <h3>JavaScript is one of the 3 basic languages of the web, along with HTML and CSS</h3><br>
+    <h3>JavaScript can display data in a few ways:</h3><br>
+    <ul style="list-style-type:none;">
+        <li>Writing into the HTML output using document.write()  <div style="color:red; display:inline">Using this will delete ALL HTML from your page</div></li>
+        <li>Writing into an alert box, using window.alert()</li>
+        <li>Writing into the browser console, using console.log()</li>
+        <li>Writing into an HTML element, using the element.innerHTML property</li>
+    </ul>
 
-    <div id="javascript-example">
-        <h3>Here's an example of JavaScript:</h3>
-        <button id="js-example-btn" type="button" onclick="alert('Hello World!')">Click Me!</button>
+    <div id="js-innerHTML-example">
+        <h3>innerHTML Example</h3>
+        <p id="js-innerHTML-p">This is a paragraph</p>
+        <button type="button" onclick="document.getElementById('js-innerHTML-p').innerHTML='Hello World!'">Click Me!</button>
     </div>
+    
+    <div id="js-document-write-example">
+        <h3>document.write() Example</h3>
+        <button type="button" onclick="document.write('Hello World! (Reload to go back)')">Click Me!</button>
+    </div>
+
+    <div id="js-window-alert-example">
+        <h3>window.alert() Example</h3>
+        <button type="button" onclick="window.alert('Hello World!')">Click Me!</button>
+    </div>
+
+    <div id="js-console-log-example">
+        <h3>console.log() Example</h3>
+        <p>(Check your developer console)</p>
+        <button type="button" onclick="console.log('Hello World!')">Click Me!</button>
+    </div>
+
+
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
