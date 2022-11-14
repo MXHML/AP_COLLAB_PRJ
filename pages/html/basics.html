@@ -12,13 +12,17 @@
     <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
     <div id="sideNav" class="sideNav">
 
-        <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;margin-right:10px;">&#10006;</a>
+        <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;">&#10006;</a>
 
         <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
 
         <div id="html-links-container" style="display:none;">
             <a href="/pages/html/welcome.html">HTML Home</a>
             <a href="/pages/html/basics.html">HTML Basics</a>
+            <a href="/pages/html/elements.html">HTML Elements</a>
+            <a href="/pages/html/styling.html">HTML Styling</a>
+            <a href="/pages/html/listing.html">HTML Listing</a>
+            <a href="/pages/html/classes.html">HTML Classes</a>
         </div>
 
         <div onclick="JSDropdownArrow()" id="javascript-dropdown" class="dropdown">JavaScript<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
@@ -26,10 +30,44 @@
         <div id="javascript-links-container" style="display:none;">
             <a href="/pages/javascript/welcome.html">JavaScript Welcome</a>
             <a href="/pages/javascript/basics.html">JavaScript Basics</a>
+            <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
+            <a href="/pages/javascript/js_output.html">JS Output</a>
+            <a href="/pages/javascript/variables.html">JS Variables</a>
+            <a href="/pages/javascript/functions.html">JS Functions</a>
+        </div>
+
+        <div onclick="debugDropdownArrow()" id="debug-dropdown" class="dropdown">Debug<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+
+        <div id="debug-links-container" style="display:none;">
+            <a href="/pages/debug/welcome.html">Debug Welcome</a>
+            <a href="/pages/debug/basics.html">Debug Basics</a>
         </div>
     </div>
 
     <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
+</div>
+<div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
+    <h1>Welcome to HTML!</h1>
+    <div id="about-html">
+        <p>HTML Basics</p>
+        </div>
+    </div>
+<div id="body-container" style="text-align:center;">
+    <p>A page must have a declared HTML Doctype to display the page properly</p>
+    <ul style="list-style-type:none;">
+        <li>
+            <code> !DOCTYPE html </code> "Declares that the document is an html5 document"</li>
+        <li>
+            <code> html </code> "Declares the document as an html document"</li>
+        <li>
+            <code> head </code> "Contains information about the document"</li>
+        <li>
+            <code> body </code> "Contains the visible page content"</li>
+    </ul>
+    <p>HTML elements are the building blocks of HTML pages</p>
+</div>
+
+
 </div>
 </body>
 <script src="/assets/scripts/logic.js"></script>
