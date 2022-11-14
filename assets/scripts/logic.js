@@ -7,9 +7,6 @@ var themeSwitch_btn = document.getElementById("theme-switch");
 var HTMLDropdown = document.getElementById("html-dropdown");
 var JSDropdown = document.getElementById("javascript-dropdown");
 var debugDropdown = document.getElementById("debug-dropdown");
-var theme_dd = document.getElementById("theme_dd");
-let themeList = ['light','dark','christmas','red'];
-
 
 
 window.addEventListener('load',()=>{
@@ -46,7 +43,8 @@ function changeTheme(){
         document.getElementById("sideNav").style.backgroundColor='white';
         document.getElementById("html-dropdown").style.color='black';
         document.getElementById("javascript-dropdown").style.color='black';
-        document.getElementById('debug-dropdown').style.color='black';
+        document.getElementById("debug-dropdown").style.color='black';
+        document.getElementById('theme-switch').style.color='white';
         QuerySelectorA.forEach(()=>{
             for(let x=0;x<QuerySelectorA.length;x++){
                 QuerySelectorA[x].style.color='black';
@@ -85,7 +83,8 @@ function changeTheme(){
         document.getElementById("sideNav").style.backgroundColor='black';
         document.getElementById("html-dropdown").style.color='white';
         document.getElementById("javascript-dropdown").style.color='white';
-        document.getElementById('debug-dropdown').style.color='white';
+        document.getElementById("debug-dropdown").style.color='white';
+        document.getElementById('theme-switch').style.color='black';
 
         QuerySelectorP.forEach(()=>{
             for(let x=0;x<QuerySelectorP.length;x++){
@@ -208,15 +207,4 @@ debugDropdown.addEventListener("click",()=>{
         document.getElementById("debug-links-container").style.display='block';
         debugDropdownListID=0;
     }
-})
-
-window.addEventListener('load',()=>{
-    themeList.forEach(()=>{
-        for (let x=0;x<themeList.length;x++){
-            let temp = document.createElement('option');
-            temp.value=themeList[x];
-            temp.innerHTML=themeList[x];
-            theme_dd.appendChild(temp);
-        }
-    })
 })
