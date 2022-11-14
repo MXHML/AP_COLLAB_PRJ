@@ -5,19 +5,19 @@
 }
 
 .fa-caret-down {
-  float: right;
-  padding-right: 8px;
+  float: right; /* Aligns the caret to the right */
+  padding-right: 8px; /* Adds some space between the caret and the link text */
 }
 
 /*CSS Rules from W3Schools*/
 .sideNav {
-    text-align: center;
+    text-align: center; /* Aligns the links to the center */
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 10; /* Stay on top */
     top: 0; /* Stay at the top */
-    left: 0;
+    left: 0; /* Stay on the left */
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
@@ -26,14 +26,14 @@
   
   /* The navigation menu links */
   .sideNav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    text-align: left;
-    margin-left:5px;
+    padding: 8px 8px 8px 32px; /* The padding is the space between the link text and the left and right borders */
+    text-decoration: none; /* No underline */
+    font-size: 25px; /* Increase font size */
+    color: #818181; /* Grey color */
+    display: block; /* Make it into a block element to fill the whole list */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    text-align: left; /* Align link text to the left */
+    margin-left:5px; /* Adds some space between the link text and the left border */
   }
   
   /* When you mouse over the navigation links, change their color */
@@ -43,68 +43,68 @@
   
   /* Position and style the close button (top right corner) */
   .sideNav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    position: absolute; /* Position it in the top right corner */
+    top: 0; /* 0px from the top */
+    right: 25px; /* Adds some space between the close button and the right border */
+    font-size: 36px; /* Increase font size */
+    margin-left: 50px; /* Adds some space between the link text and the left border */
   }
   
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
-    transition: margin-left .5s;
-    padding: 20px;
+    transition: margin-left .5s; /*Transition effect */
+    padding: 20px; /* Adds some padding to the page content */
   }
   
 .dropdown{
-    background-color: rgba(0,0,0,0.1);
-    user-select: none;
-    color:white;
-    font-size: 25px;
-    transition: 0.3s;
+    background-color: rgba(0,0,0,0.1); /* Black with 0.1 opacity */
+    user-select: none; /* Prevents text selection */
+    color:white; /* White text color */
+    font-size: 25px; /* Increase font size */
+    transition: 0.3s; /* Transition effect when hovering over the dropdown content */
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sideNav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sideNav {padding-top: 15px;}
-    .sideNav a {font-size: 18px;}
+  @media screen and (max-height: 450px)  { 
+    .sideNav {padding-top: 15px;} /* Adds some space between the top border and the links */  
+    .sideNav a {font-size: 18px;} /* Decrease font size */
   }
 
 #theme-switch{
-  position: absolute;
-  background-color: transparent;
-  margin-top: 0px;
-  margin-right: 0px;
-  font-size:15px;
-  user-select:none; 
-  margin:0px;
-  margin-bottom:2%;
-  z-index:2;
-  top:10px;
-  left:12px;
+  position: absolute; /* Position it in the top left corner */
+  background-color: transparent; /* Transparent background */
+  margin-top: 0px; /* Adds some space between the close button and the right border */
+  margin-right: 0px; /* Adds some space between the close button and the right border */
+  font-size:15px; /* Increase font size */
+  user-select:none; /* Prevents text selection */ 
+  margin:0px; /* Adds some space between the close button and the right border */
+  margin-bottom:2%; /* Adds some space between the close button and the right border */
+  z-index:2; /* Stay on top */
+  top:10px; /* 10px from the top */
+  left:12px; /* Adds some space between the close button and the right border */
 }
 
 #openNav_btn{
-  width: fit-content;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  z-index:1;
-  top:3vh;
+  width: fit-content; /* Width of the button */
+  text-align: justify; /* Aligns the text to the left */
+  margin-top: 0px; /* Adds some space between the close button and the right border */
+  margin-bottom: 0px; /* Adds some space between the close button and the right border */
+  padding-top: 0px; /* Adds some space between the close button and the right border */
+  z-index:1; /* Stay on top */
+  top:3vh; /* 3vh from the top */
 }
 
 .header{
-  margin-top:3%;
-  z-index: -1;
-  position:relative;
-  top:-30px;
-  text-align: center;
-  pointer-events: none;
+  margin-top:3%; /* Adds some space between the close button and the right border */
+  z-index: -1; /* Stay on bottom */
+  position:relative; /* Stay on bottom */
+  top:-30px; /* 30px from the top */
+  text-align: center; /* Aligns the text to the center */
+  pointer-events: none; /* Prevents text selection */
 }
 
 code{
   color:lightgreen;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.3); /* Black with 0.3 opacity */
 }

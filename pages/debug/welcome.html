@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Helper</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+</head>
+<body>
+    <div id="main-container">
+        <p id="openNav_btn" style="font-size:35px; user-select:none; margin-right:-100%; position: absolute" onclick="openNav()">&#9776;</p>
+        <div id="sideNav" class="sideNav">
+    
+            <a id="closeNav_btn" onclick="closeNav()" style="color:white; user-select: none; font-size:25px; text-align: center;margin-right:10px;">&#10006;</a>
+    
+            <div onclick="HTMLDropdownArrow()" id="html-dropdown" class="dropdown">Html<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="html-links-container" style="display:none;">
+                <a href="/pages/html/welcome.html">HTML Home</a>
+                <a href="/pages/html/basics.html">HTML Basics</a>
+            </div>
+    
+            <div onclick="JSDropdownArrow()" id="javascript-dropdown" class="dropdown">JavaScript<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="javascript-links-container" style="display:none;">
+                <a href="/pages/javascript/welcome.html">JavaScript Welcome</a>
+                <a href="/pages/javascript/basics.html">JavaScript Basics</a>
+                <a href="/pages/javascript/how_to.html">Link JS to HTML</a>
+                <a href="/pages/javascript/js_output.html">JS Output</a>
+                <a href="/pages/javascript/variables.html">JS Variables</a>
+                <a href="/pages/javascript/functions.html">JS Functions</a>
+            </div>
+    
+            <div onclick="debugDropdownArrow()" id="debug-dropdown" class="dropdown">Debug<div style="font-size:15px; display:inline"> &#x25BC;</div></div>
+    
+            <div id="debug-links-container" style="display:none;">
+                <a href="/pages/debug/welcome.html">Debug Welcome</a>
+                <a href="/pages/debug/basics.html">Debug Basics</a>
+            </div>
+    </div>
+
+    <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
+<div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
+    <h1>Welcome to the debug page!</h1>
+    <div id="about-js">
+        <p>This page is here to help you debug your code,</p>
+        <p>by providing fixes for common errors!</p>
+    </div>
+</div>
+<div id="body-container" style="text-align:center;">
+<div id="search-container">
+    <input type="search" id="language_dd" list="language-list" placeholder="Select Language:">
+    <input type="search" id="error_dd" list="error_list" placeholder="Select Error:">
+    <datalist id="language-list">
+        <option value="HTML">HTML5</option>
+        <option value="JS">JavaScript</option>
+        <option value="CSS">Cascading Stylesheets</option>
+        <option value="API">API Responses</option>
+    </datalist>
+    <datalist id="error_list">
+    </datalist>
+    </div>
+    <div id="result-container">
+
+    </div>
+</div>
+</div>
+</body>
+<script src="/assets/scripts/logic.js"></script>
+<script src="debug_logic.js"></script>
+</html>
