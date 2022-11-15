@@ -36,6 +36,7 @@ function changeTheme() {
         let QuerySelectorH3 = document.querySelectorAll('h3'); //Get all the 'h3' elements
         let QuerySelectorH1 = document.querySelectorAll('h1'); //Get all the 'h1' elements
         let QuerySelectorLi = document.querySelectorAll('li'); //Get all the 'li' elements
+        let QuerySelectorDl = document.querySelectorAll('dl'); //Get all the 'dl' elements
         document.getElementById('closeNav_btn').style.color = 'black' //Change the color of the closeNav button
         document.getElementById("html").style.backgroundColor = 'grey'; //Change the background color of the html element
         document.getElementById("openNav_btn").style.color = 'white'; //Change the color of the openNav button
@@ -69,12 +70,18 @@ function changeTheme() {
                 QuerySelectorLi[x].style.color = 'white'; //Change the color of the 'li' elements
             }
         })
+        QuerySelectorDl.forEach(() => { //Loop through all the 'dl' elements
+            for (let x = 0; x < QuerySelectorDl.length; x++) {
+                QuerySelectorDl[x].style.color = 'white'; //Change the color of the 'dl' elements
+            }
+        })
     } else if (themeID == 1) {
         let QuerySelectorA = document.querySelectorAll('a'); //Get all the 'a' elements
         let QuerySelectorP = document.querySelectorAll('p'); //Get all the 'p' elements
         let QuerySelectorH3 = document.querySelectorAll('h3'); //Get all the 'h3' elements
         let QuerySelectorH1 = document.querySelectorAll('h1'); //Get all the 'h1' elements
         let QuerySelectorLi = document.querySelectorAll('li'); //Get all the 'li' elements
+        let QuerySelectorDl = document.querySelectorAll('dl'); //Get all the 'dl' elements
         document.getElementById('closeNav_btn').style.color = 'black'; //Change the color of the closeNav button
         document.getElementById("html").style.backgroundColor = 'white'; //Change the background color of the html element
         document.getElementById("openNav_btn").style.color = 'black'; //Change the color of the openNav button
@@ -114,6 +121,11 @@ function changeTheme() {
             }
         })
 
+        QuerySelectorDl.forEach(() => { //Loop through all the 'dl' elements
+            for (let x = 0; x < QuerySelectorDl.length; x++) {
+                QuerySelectorDl[x].style.color = 'black'; //Change the color of the 'dl' elements
+            }
+        })
     }
 }
 
