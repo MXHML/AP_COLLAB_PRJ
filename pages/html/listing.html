@@ -39,7 +39,6 @@
 
         <div id="debug-links-container" style="display:none;">
             <a href="/pages/debug/welcome.html">Debug Welcome</a>
-            <a href="/pages/debug/basics.html">Debug Basics</a>
         </div>
     </div>
 
@@ -52,31 +51,54 @@
         <p>HTML Listing</p>
         </div>
     </div>
-<div id="body-container" style="text-align:center; width: auto;">
+<div id="body-container" style="text-align:center; width: auto;;">
     <center>
     <p>HTML allows user to list items orderly or unorderly</p>
-    <p>There are two types of lists in HTML</p>
+    <p>There are three types of lists in HTML</p>
     <p>Ordered List</p>
     <p>Unordered List</p>
     <p>Ordered List</p>
     <p>Ordered list is a list where each item is numbered</p>
     <p>Unordered List</p>
     <p>Unordered list is a list where each item is marked with a bullet</p>
+    <p>Description List</p>
+    <p>Description list is a list where each item has a description</p>
     <p>Example</p>
     <p>Ordered List</p>
+    <code>
+    &lt;ol style=list-style-position:inside;"&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+    </code>
     <ol style="list-style-position:inside;">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ol>
     <p>Unordered List</p>
+    <code>
+    &lt;ul style="list-style-position:inside;"&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    </code>
     <ul style="list-style-position:inside;">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
-    <p>HTML also allows description lists</p>
-    <p>Example</p>
+    <p>Description List</p>
+    <code> 
+        &lt;dl&lt;
+        &lt;dt&lt;Item 1&lt;/dt&lt;
+        &lt;dd&lt;Item 1 Description&lt;/dd&lt;
+        &lt;/dl&lt;
+    </code>
+    <br>
+    <Br>
     <dl style="margin:auto;">
         <dt>HTML</dt>
         <dd> - Hyper Text Markup Language</dd>

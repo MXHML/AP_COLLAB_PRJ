@@ -40,13 +40,43 @@
 
         <div id="debug-links-container" style="display:none;">
             <a href="/pages/debug/welcome.html">Debug Welcome</a>
-            <a href="/pages/debug/basics.html">Debug Basics</a>
         </div>
     </div>
 
     <button id="theme-switch" type="button" onclick="changeThemeVal()">Switch Themes</button>
 
 </div>
-</body>
+<div class="header" id="header" style="background-color:rgba(0,0,0,0.2)">
+    <h1>Welcome to HTML!</h1>
+    <div id="about-html">
+        <p>HTML elements can be given a class to alter multiple styles of the same category item at once</p>
+        <p>Classes are defined in the head of the HTML document</p>
+        <p>Classes are defined with a period before the name of the class</p>
+    </div>
+</div>
+    <div id="body-container" style="background-color:rgba(0,0,0,0.2)">
+        <div id="body-content">
+            <style>
+                .red {
+                    color: red;
+                }
+                .blue {
+                    color: blue;
+                }
+                .green {
+                    color: green;
+                }
+            </style>
+            <h2>Example</h2>
+            <code>
+                &lt;h1 class="red"&gt;This is red&lt;/h1&gt;<br>
+                &lt;h1 class="blue"&gt;This is blue&lt;/h1&gt;<br>
+                &lt;h1 class="green"&gt;This is green&lt;/h1&gt;
+            </code>
+            <p>Here is an example of a class being used to change the color of headings</p>
+            <h2 class="red">This is a heading with the class "red"</h2>
+            <h2 class="blue">This is a heading with the class "blue"</h2>
+            <h2 class="green">This is a heading with the class "green"</h2>
+</div>
 <script src="/assets/scripts/logic.js"></script>
 </html>
